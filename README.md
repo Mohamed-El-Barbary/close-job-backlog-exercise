@@ -69,3 +69,7 @@ Recruiters sometimes need to stop accepting applications for a job when the posi
 - Update job status to `Closed` and record `ClosedAt`.
 
 ---
+
+**Exercise:** Close Job  
+**Domain:** Job Applications Management  
+**Artifact:** PRD & Agile Backlog Breakdown
