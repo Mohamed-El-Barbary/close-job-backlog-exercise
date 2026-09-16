@@ -43,3 +43,29 @@ Recruiters sometimes need to stop accepting applications for a job when the posi
 - Job doesn't belong to the requester → **403 Forbidden**.
 - New application for a **Closed** job → API rejects the application.
 - Existing applications remain unchanged and accessible to the recruiter.
+
+---
+
+# Task 2 — Epic → Stories → Task Breakdown
+
+## Epic
+
+**Job Applications Management**
+
+## User Stories
+
+| Story | Acceptance Criteria | Priority | Points |
+|---|---|---|---:|
+| **Recruiter closes their own job**<br><br>As a Recruiter, I want to close my own open job, so that it stops receiving new applications. | Valid close while job is Open → status becomes Closed and `ClosedAt` is recorded | **High** | **2** |
+| **Prevent closing an already closed job**<br><br>As a Recruiter, I want the system to stop me closing a job that is already closed, so that the job status remains consistent. | Close attempt on Closed job is rejected | **Medium** | **1** |
+| **Preserve existing applications**<br><br>As a Recruiter, I want existing applications to remain available after closing a job, so that I can continue processing candidates who already applied. | Existing applications remain unchanged and accessible after the job is closed | **High** | **2** |
+
+## Task Breakdown — Story 1: Recruiter Closes Their Own Job
+
+- Add `Closed` status + `ClosedAt` field to Job (migration).
+- Implement `PATCH /api/jobs/{id}/close` endpoint.
+- Add validation — job status must be `Open`.
+- Add validation — requester must own the job.
+- Update job status to `Closed` and record `ClosedAt`.
+
+---
