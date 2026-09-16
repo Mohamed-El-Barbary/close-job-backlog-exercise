@@ -70,6 +70,12 @@ Recruiters sometimes need to stop accepting applications for a job when the posi
 
 ---
 
+## Jira Board
+
+<img width="1843" height="877" alt="image" src="https://github.com/user-attachments/assets/3ca12b4f-5228-4c6c-b116-db79534e7585" />
+
+---
+
 **Exercise:** Close Job  
 **Domain:** Job Applications Management  
 **Artifact:** PRD & Agile Backlog Breakdown
